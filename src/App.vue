@@ -14,7 +14,8 @@ export default {
     return {
       buttons:
       [
-        { title: 'Map', icon: 'mdi-map', route:'/map' },
+        { title: 'Current Location', icon: 'mdi-map', route:'/currentLocation' },
+        { title: 'Pass Over Times', icon: 'mdi-map', route:'/PassOver' },
       ]
     }
   },

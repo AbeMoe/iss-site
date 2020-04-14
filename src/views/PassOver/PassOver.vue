@@ -1,8 +1,9 @@
 <template>
-    <v-container fill-height fluid>
+    <v-container fill-height fluid ma-0 pa-0>
       <v-row align="center" justify="space-around">
         <v-col>
           <GmapMap
+            @click='passOverTime'
             ref="map"
             :center="center"
             :zoom="4"
@@ -11,12 +12,15 @@
           >
             <GmapMarker
               :position="position"
+              :label="label"
+              style="background-color:blue;"
             />
 
           </GmapMap>
         </v-col>
       </v-row>
+      <v-snackbar v-model="snackbar"> {{snackbarMessage}} </v-snackbar>
     </v-container>
 </template>
 
-<script src="./Map.js"/>
+<script src="./PassOver.js"/>

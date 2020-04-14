@@ -24,8 +24,6 @@
 
       }
     },
-
-
     props:
     {
       buttons: Array,

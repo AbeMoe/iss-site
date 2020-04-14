@@ -1,8 +1,10 @@
-
-module.exports = {
+import Map from '@/components/Map.vue'
+export default {
   
   name: 'MapView',
-  components: {
+  components: 
+  {
+    Map,
   },
   data: function() 
   {
@@ -18,8 +20,9 @@ module.exports = {
     {
       var google = await this.$gmapApiPromiseLazy();
       var result = await this.axios.get('http://api.open-notify.org/iss-now.json')
+      console.log(result);
       var {latitude, longitude} = result.data.iss_position;
-      iss_position = new google.maps.LatLng(latitude,longitude);
+      var iss_position = new google.maps.LatLng(latitude,longitude);
       this.position = iss_position
       this.$refs.map.$mapObject.panTo({lat:parseFloat(latitude),lng:parseFloat(longitude)})
     }

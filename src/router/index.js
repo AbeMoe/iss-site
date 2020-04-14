@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MapView from '../views/Map/Map.vue'
+import currentLocation from '@/views/currentLocation/currentLocation.vue'
+import PassOver from '@/views/PassOver/PassOver.vue'
 
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/map',
-    name: 'Home',
-    component: MapView
+    path: '/currentLocation',
+    name: 'currentLocation',
+    component: currentLocation
+  },
+  {
+    path: '/PassOver',
+    name: 'PassOver',
+    component: PassOver
   },
 ]
 
