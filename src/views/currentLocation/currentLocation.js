@@ -1,11 +1,7 @@
-import Map from '@/components/Map.vue'
 export default {
   
   name: 'MapView',
-  components: 
-  {
-    Map,
-  },
+
   data: function() 
   {
     return{

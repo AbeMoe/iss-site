@@ -15,7 +15,8 @@ export default {
       buttons:
       [
         { title: 'Current Location', icon: 'mdi-map', route:'/currentLocation' },
-        { title: 'Pass Over Times', icon: 'mdi-map', route:'/PassOver' },
+        { title: 'Pass Over Times', icon: 'mdi-clock', route:'/PassOver' },
+        { title: 'People currently in space', icon: 'mdi-rocket', route:'/peopleInSpace' },
       ]
     }
   },
