@@ -5,6 +5,15 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyC4xSzgaLeBQfV_iuGtpY5u9qzuAT5ni9M',
+    libraries: 'places'
+  },
+  installComponents: true
+})
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)

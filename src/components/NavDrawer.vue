@@ -21,61 +21,11 @@
   export default {
     data () {
       return {
-        name: this.$store.state.firstname,
-        color: 'primary',
-        colors: [
-          'primary',
-          'blue',
-          'success',
-          'red',
-          'teal',
-        ],
-        drawer: false,
-        expandOnHover: true,
-        temporary: false,
+
       }
     },
-    mounted:function ()
-    {
-      console.log(this.isMobile())
-      if(this.isMobile())
-      {
-        //this.drawer= false
-        //this.temporary = false
-      }
-      else
-      {
-        this.drawer = true
-      }
-    },
-    methods:
-    {
-      isMobile:function ()
-      {
-        const toMatch = 
-        [
-          /Android/i,
-          /webOS/i,
-          /iPhone/i,
-          /iPad/i,
-          /iPod/i,
-          /BlackBerry/i,
-          /Windows Phone/i
-        ];
-        return toMatch.some((toMatchItem) => {
-          return navigator.userAgent.match(toMatchItem);
-        });
-      },
-      hide: function()
-      {
-        this.drawer = !this.drawer;
-      },
-      logout: async function()
-      {
-        await this.$store.dispatch('logout');
-        this.$router.push({name:'login'});
-      }
-    },
+
+
     props:
     {
       buttons: Array,

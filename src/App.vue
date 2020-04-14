@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <NavDrawer :buttons="buttons"/>
-    <router-view></router-view>
+      <v-content>
+            <router-view/>
+      </v-content>
   </v-app>
 </template>
 
@@ -12,11 +14,7 @@ export default {
     return {
       buttons:
       [
-        { title: 'Analytics', icon: 'mdi-chart-line', route:'/analytics' },
-        { title: 'Users', icon: 'mdi-account',route:'/users' },
-        { title: 'Resources', icon: 'mdi-food-apple',route:'/resources' },
-        { title: 'Category', icon: 'mdi-map-marker-multiple',route:'/category' },
-        { title: 'Copilotships', icon: 'mdi-account-multiple',route:'/mentorship'}
+        { title: 'Map', icon: 'mdi-map', route:'/map' },
       ]
     }
   },
